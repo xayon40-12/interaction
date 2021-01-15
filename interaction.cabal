@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d6fd0a8317ccbfc594299fe68bb49042670452a4365e9a4dad46bb6f185ebc28
+-- hash: 0e90f01d5ea5edcc61f7dcc04c4293f1b653c227eaec45f8ea1917742e1c4ae4
 
 name:           interaction
 version:        0.1.0.0
@@ -27,12 +27,14 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Value
   other-modules:
       Paths_interaction
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      MissingH
+    , base >=4.7 && <5
   default-language: Haskell2010
 
 executable interaction-exe
@@ -43,6 +45,7 @@ executable interaction-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      MissingH
+    , base >=4.7 && <5
     , interaction
   default-language: Haskell2010
